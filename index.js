@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const shoeSizes = [6, 6.5, 7, 7.5];
-  const selectSize = document.getElementsById("shoe-size");
+  const submitForm = document.querySelector("#shoeName");
+  submitForm.addEventListener("submit", function (submitEvent) {
+    submitEvent.preventDefault();
+    const shoeSizes = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10];
+    const selectSize = document.getElementsById("shoe-size");
+  });
 });
-fetch("http://localhost:3000")
+fetch("http://localhost:3000/shoes")
   .then((res) => res.json())
   .then((sneakers) => {
     sneakers.forEach((sneaker) => {
