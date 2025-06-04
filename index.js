@@ -1,20 +1,40 @@
+const url = "http://localhost:3000/shoes";
 document.addEventListener("DOMContentLoaded", () => {
-  const submitForm = document.querySelector("#shoeName");
-  submitForm.addEventListener("submit", function (submitEvent) {
+  const form = document.querySelector("form");
+  const style = document.querySelector("#shoeStyle");
+  const name = document.getElementById("shoeName");
+  const shoeColor = document.getElementById("shoeColor");
+  const size = document.getElementById("shoe-size");
+
+  form.addEventListener("submit", function (submitEvent) {
     submitEvent.preventDefault();
-    const shoeSizes = [6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10];
-    const selectSize = document.getElementsById("shoe-size");
+
+    // get all form input values
+    // function sneakerDetail(details) {
+    //   const form = document.querySelector("form[name=myForm]");
+    //   const shoeName = document.querySelector('input[name="shoeName"]').value;
+    //   const style = document.querySelector('select[name="shoeStyle"]').value;
+    //   const color = document.querySelector('select[name="shoeColor"]').value;
+    //   const size = document.querySelector('select[name="shoe-size"]').value;
+    // }
+    // send POST request with values to save in db.json
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: name.value,
+        style: style.value,
+        color: shoeColor.value,
+        size: size.value,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
   });
 });
-fetch("http://localhost:3000/shoes")
-  .then((res) => res.json())
-  .then((sneakers) => {
-    sneakers.forEach((sneaker) => {
-      const options = shoeSizes.map((size) => {
-        const option = document.createElement("option");
-        option.value = size;
-        option.textContent = size;
-        return option;
-      });
-    });
-  });
+
+// fetch("http://localhost:3000/shoes")
+//
