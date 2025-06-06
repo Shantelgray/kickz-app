@@ -72,7 +72,11 @@ function displaySneakers(sneakers) {
   const container = document.getElementById("output") || document.body;
   container.innerHTML = "";
 
+  const scrollBar = document.createElement("div");
+  scrollBar.className = "sneaker-scroll-bar";
+
   const ol = document.createElement("ol");
+  ol.className = "sneaker-list";
 
   sneakers.forEach((shoe) => {
     const li = document.createElement("li");
@@ -81,10 +85,12 @@ function displaySneakers(sneakers) {
     const color = shoe.color;
     const size = shoe.size;
 
-    li.textContent = `${shoe.name} - ${shoe.style} - ${shoe.color} - size ${shoe.size}`;
+    li.innerHTML = `${shoe.name} - ${shoe.style} - ${shoe.color} - size ${shoe.size}`;
 
     ol.appendChild(li);
   });
 
-  container.appendChild(ol);
+  scrollBar.appendChild(ol);
+
+  container.appendChild(scrollBar);
 }
