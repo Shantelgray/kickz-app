@@ -1,40 +1,69 @@
 const url = "http://localhost:3000/shoes";
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
-  const style = document.querySelector("#shoeStyle");
   const name = document.getElementById("shoeName");
-  const shoeColor = document.getElementById("shoeColor");
+  const style = document.getElementById("shoeStyle");
+  const color = document.getElementById("shoeColor");
   const size = document.getElementById("shoe-size");
 
-  form.addEventListener("submit", function (submitEvent) {
-    submitEvent.preventDefault();
+  sneakerDetail();
 
-    // get all form input values
-    // function sneakerDetail(details) {
-    //   const form = document.querySelector("form[name=myForm]");
-    //   const shoeName = document.querySelector('input[name="shoeName"]').value;
-    //   const style = document.querySelector('select[name="shoeStyle"]').value;
-    //   const color = document.querySelector('select[name="shoeColor"]').value;
-    //   const size = document.querySelector('select[name="shoe-size"]').value;
-    // }
-    // send POST request with values to save in db.json
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const newShoe = {
+      name: "",
+      style: "",
+      color: "",
+      size: "",
+    };
+
     fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify({
-        name: name.value,
-        style: style.value,
-        color: shoeColor.value,
-        size: size.value,
-      }),
+      body: JSON.stringify(newShoe),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then(() => {
+        sneakerDetail();
+
+        document.getElementById("shoeName").value = "";
+        document.getElementById("shoeStyle").value = "";
+        document.getElementById("shoeColor").value = "";
+        document.getElementById("shoe-size").value = "";
+      })
+      .catch(error);
   });
 });
+function sneakerDetail() {
+  fetch(url)
+    .then((response) => response.json())
+    .then((sneakers) => {
+      displaySneakers(sneakers);
+    })
+    .catch(error);
+}
+function displaySneakers(sneakers) {
+  const container = document.getElementById("output") || document.body;
+  container.innerHTML = "";
 
-// fetch("http://localhost:3000/shoes")
-//
+  const ol = document.createElement("ol");
+
+  for (const shoe of sneakers) {
+    const li = document.createElement("li");
+    const name = shoe.name;
+    const style = shoe.style;
+    const color = shoe.color;
+    const size = shoe.size;
+
+    li.textContent = `${shoe.name} - ${shoe.style} - ${shoe.color} - size ${shoe.size}`;
+
+    ol.appendChild(li);
+  }
+
+  container.appendChild(ol);
+}

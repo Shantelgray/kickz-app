@@ -2,80 +2,94 @@
   "shoes": [
     {
       "id": "a5fb",
-      "name": "jordan 1",
+      "name": "Jordan 1",
       "style": "Nike Air Max",
-      "color": "grey",
+      "color": "Grey",
       "size": "10"
     },
     {
       "id": "84e6",
-      "name": "jordan 1",
+      "name": "Jordan 1",
       "style": "Nike Air Max",
-      "color": "grey",
+      "color": "Grey",
       "size": "10"
     },
     {
       "id": "2cf0",
       "name": "Born x Raised",
       "style": "Nike SB",
-      "color": "blue",
+      "color": "Blue",
       "size": "9"
     },
     {
       "id": "5ee5",
       "name": "Nike Dodgers",
       "style": "Nike Kobe",
-      "color": "blue",
+      "color": "Blue",
       "size": "9.5"
     },
     {
       "id": "fb85",
       "name": "Jordan 4 Brick By Brick",
       "style": "Jordan",
-      "color": "firewood orange",
+      "color": "Firewood Orange",
       "size": "9"
     },
     {
       "id": "bbf6",
       "name": "Jordan 1 Medium Olive",
       "style": "Jordan",
-      "color": "olive green",
+      "color": "Olive Green",
       "size": "9.5"
     },
     {
       "id": "b6de",
       "name": "Verdy",
       "style": "Nike SB",
-      "color": "teal",
+      "color": "Teal",
       "size": "9"
     },
     {
       "id": "ed0d",
       "name": "Futura",
       "style": "Nike SB",
-      "color": "blue",
+      "color": "Blue",
       "size": "9"
     },
     {
       "id": "c673",
       "name": "Jordan 4 Sb",
       "style": "Nike SB",
-      "color": "blue",
+      "color": "Blue",
       "size": "9"
     },
     {
       "id": "8715",
       "name": "Concepts",
       "style": "Nike Air Max",
-      "color": "multi color",
+      "color": "Multi Color",
       "size": "9"
     },
     {
       "id": "8f87",
-      "name": "Union La",
+      "name": "Union LA",
       "style": "Nike Dunk",
-      "color": "purple",
+      "color": "Purple",
       "size": "9"
+    },
+    {
+      "id": "5d10",
+      "name": "Jordan 1 Velvet Brown",
+      "style": "Jordan",
+      "color": "Brown",
+      "size": "9"
+    },
+    {
+      "id": "d7ff",
+      "name": "Jordan Lost & Found",
+      "style": "Jordan",
+      "color": "Red",
+      "size": "9.5"
     }
   ]
 }
