@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchButton.addEventListener("click", (event) => {
     event.preventDefault();
-    const query = searchInput.value.toLowerCase();
 
     fetch(url)
       .then((response) => response.json())
@@ -61,14 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
-function sneakerDetail() {
+
+const sneakerDetail = () => {
   fetch(url)
     .then((response) => response.json())
     .then((sneakers) => {
       displaySneakers(sneakers);
     });
-}
-function displaySneakers(sneakers) {
+};
+
+const displaySneakers = (sneakers) => {
   const container = document.getElementById("output") || document.body;
   container.innerHTML = "";
 
@@ -93,4 +94,4 @@ function displaySneakers(sneakers) {
   scrollBar.appendChild(ol);
 
   container.appendChild(scrollBar);
-}
+};
