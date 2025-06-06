@@ -1,0 +1,102 @@
+{
+  "shoes": [
+    {
+      "id": "a5fb",
+      "name": "Jordan 1 Washed Black",
+      "style": "Jordan",
+      "color": "Grey",
+      "size": "9"
+    },
+    {
+      "id": "84e6",
+      "name": "Jordan 1 Game Royal",
+      "style": "Jordan 1",
+      "color": "Blue",
+      "size": "9.5"
+    },
+    {
+      "id": "2cf0",
+      "name": "Born x Raised",
+      "style": "Nike SB",
+      "color": "Blue",
+      "size": "9"
+    },
+    {
+      "id": "5ee5",
+      "name": "Nike Dodgers",
+      "style": "Nike Kobe",
+      "color": "Blue",
+      "size": "9.5"
+    },
+    {
+      "id": "fb85",
+      "name": "Jordan 4 Brick By Brick",
+      "style": "Jordan",
+      "color": "Firewood Orange",
+      "size": "9"
+    },
+    {
+      "id": "bbf6",
+      "name": "Jordan 1 Medium Olive",
+      "style": "Jordan",
+      "color": "Olive Green",
+      "size": "9.5"
+    },
+    {
+      "id": "b6de",
+      "name": "Verdy",
+      "style": "Nike SB",
+      "color": "Teal",
+      "size": "9"
+    },
+    {
+      "id": "ed0d",
+      "name": "Futura",
+      "style": "Nike SB",
+      "color": "Blue",
+      "size": "9"
+    },
+    {
+      "id": "c673",
+      "name": "Jordan 4 Sb",
+      "style": "Nike SB",
+      "color": "Blue",
+      "size": "9"
+    },
+    {
+      "id": "8715",
+      "name": "Concepts",
+      "style": "Nike Air Max",
+      "color": "Multi Color",
+      "size": "9"
+    },
+    {
+      "id": "8f87",
+      "name": "Union LA",
+      "style": "Nike Dunk",
+      "color": "Purple",
+      "size": "9"
+    },
+    {
+      "id": "5d10",
+      "name": "Jordan 1 Velvet Brown",
+      "style": "Jordan",
+      "color": "Brown",
+      "size": "9"
+    },
+    {
+      "id": "d7ff",
+      "name": "Jordan Lost & Found",
+      "style": "Jordan",
+      "color": "Red",
+      "size": "9.5"
+    },
+    {
+      "id": "1c51",
+      "name": "Union La",
+      "style": "Jordan",
+      "color": "Red",
+      "size": "9"
+    }
+  ]
+}
