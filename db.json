@@ -2,17 +2,17 @@
   "shoes": [
     {
       "id": "a5fb",
-      "name": "Jordan 1",
-      "style": "Nike Air Max",
+      "name": "Jordan 1 Washed Black",
+      "style": "Jordan",
       "color": "Grey",
-      "size": "10"
+      "size": "9"
     },
     {
       "id": "84e6",
-      "name": "Jordan 1",
-      "style": "Nike Air Max",
-      "color": "Grey",
-      "size": "10"
+      "name": "Jordan 1 Game Royal",
+      "style": "Jordan 1",
+      "color": "Blue",
+      "size": "9.5"
     },
     {
       "id": "2cf0",
